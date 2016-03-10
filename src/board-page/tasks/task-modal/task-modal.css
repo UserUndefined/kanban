@@ -1,0 +1,90 @@
+/* hack: can't set min-height of .task-modal; .modal-content will go lower than min-height*/
+
+.modal-lg > .modal-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 435px;
+  max-height: 580px;
+}
+
+.task-modal {
+  width: 560px;
+}
+
+.task-modal .modal-title h3:hover {
+  cursor: pointer;
+}
+
+.modal-content-container {
+  flex: 1 1 auto;
+  display: flex;
+  max-width: 560px;
+  min-height: 250px;
+}
+
+.modal-left-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  width: 380px;
+}
+
+.modal-right-content {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+}
+
+.comment-list {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  min-height: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.comment-container {
+  display: flex;
+  flex: 0 1 auto;
+  max-width: 100%;
+  min-width: 0px;
+}
+
+.modal-newcomment {
+  margin-top: 20px;
+}
+
+.modal-newcomment textarea {
+  flex: 1 0 auto;
+  height: 50px;
+  margin: 3px 0px;
+  max-width: 380px;
+  max-height: 200px;
+  min-height: 50px;
+  width: 380px;
+}
+
+.modal .input-group {
+  margin-top: 2px;
+}
+
+.comment-img img {
+  height: 45px;
+  width: 45px;
+}
+
+.comment-content {
+  align-items: stretch;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  min-width: 0px;
+  overflow: hidden;
+}
+
+.comment-content:nth-child(2) {
+  text-overflow: ellipsis;
+  white-space: pre-line;
+}

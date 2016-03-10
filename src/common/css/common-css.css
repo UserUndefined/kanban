@@ -1,0 +1,36 @@
+.btn-black {
+  background-color: #222 !important;
+  border: 1px solid #000;
+  color: #fff !important;
+  min-height: 34px;
+}
+
+.btn-black:hover {
+  box-shadow: 0px 0px 7px #888;
+}
+
+.btn-grey {
+  background-color: #ddd;
+  border: 1px solid #666;
+}
+
+.btn-grey:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 7px #888;
+}
+
+
+/* the submit button of a form when it's invalid*/
+
+form.ng-invalid button[type='submit']:hover {
+  cursor: not-allowed;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}

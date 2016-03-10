@@ -1,0 +1,39 @@
+.error-page-container {
+  display: flex;
+  /*flex: 1 0 auto;*/
+  margin: 10px 0px;
+  padding: 5% 0px 2% 0px;
+  min-height: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.error-page-img {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  margin: 0px 5px;
+  width: 50%;
+  height: 270px;
+  min-height: 270px;
+}
+
+.error-page-body {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  margin: 0px 5px;
+  width: 50%;
+}
+
+.error-page-body .redirect {
+  color: #555;
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 80px;
+  text-decoration: none;
+}
+
+.error-page-body .redirect:hover {
+  color: #111;
+}

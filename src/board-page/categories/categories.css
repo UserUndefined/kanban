@@ -1,0 +1,35 @@
+.category-list {
+  align-items: start;
+  display: flex;
+  flex: 0 1 auto;
+  min-height: 0px;
+}
+
+
+/**
+ * !important used to overwrite the style attribute in the ui-sortable populated HTML
+ */
+
+.category-list > .ui-sortable-placeholder {
+  background-color: #ddf;
+  border: none;
+  visibility: visible !important;
+}
+
+.category-create {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  max-height: 82px;
+  min-height: 0px;
+  padding: 5px 5px 5px 5px;
+  width: 240px;
+}
+
+.category-create > form {
+  margin: 0px;
+}
+
+.category-create > .form-group > input {
+  margin-bottom: 2px;
+}

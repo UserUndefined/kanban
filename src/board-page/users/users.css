@@ -1,0 +1,39 @@
+.user-menu-container {
+  height: 90px;
+  min-width: 400px;
+}
+
+.board-member-container {
+  display: block;
+  height: 40px;
+}
+
+.add-member-dropdown {
+  margin-top: 13px;
+  width: 180px;
+}
+
+.user-selection > .user-container:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.board-member-container .form-group {
+  margin-top: 10px;
+  width: 190px;
+}
+
+.user-menu-container input {
+  display: inline;
+  width: 180px;
+}
+
+.user-menu-container input::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.user-menu-container button {
+  display: inline;
+  width: 100px;
+}

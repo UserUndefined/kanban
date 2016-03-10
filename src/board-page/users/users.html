@@ -1,0 +1,24 @@
+<h3>{{::boardName}} Board</h3>
+
+<div class="user-menu-container">
+  <div class="board-member-container">
+    <span class="user-selection" ng-model="users" ui-sortable="::userSortOpts">
+      <kb-user ng-model="user" ng-click="openUserModal(user)" ng-repeat="user in users track by user._id"></kb-user>
+    </span>
+  </div>
+
+  <form autocomplete="off" name="amForm" novalidate ng-submit="amForm.$valid && addMember()">
+    <span dropdown on-toggle="dropdown">
+      <input class="form-control input-md" dropdown-toggle name="input" ng-model="addMemberInput" ng-model-options="{debounce: 250}" placeholder="ex:member@mail.com" type="email">
+      <ul class="add-member-dropdown dropdown-menu">
+        <li ng-click="setAddMember(member.email)" ng-repeat="member in membersSuggestions">
+          <a>{{::member.email}}</a>
+        </li>
+      </ul>
+    </span>
+    <button class="btn btn-black btn-md" type="submit">Add Member</button>
+    <small class="text-danger" ng-if="amForm.input.$error.email && amForm.input.$dirty">
+      Invalid email.
+    </small>
+  </form>
+</div>

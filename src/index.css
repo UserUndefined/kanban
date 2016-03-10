@@ -1,0 +1,43 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar-view {
+  flex: 0 0 auto;
+}
+
+#loading-bar .bar {
+  top: 50px;
+  z-index: 1;
+}
+
+.state-info-view {
+  flex: 0 0 auto;
+}
+
+.body-view {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 0;
+  /* would be nice but doesn't work on mozilla, so I created a directive copy-child-min-height
+   min-height: min-content;*/
+  padding: 0px 10px 2px 10px;
+}
+
+.footer-view {
+  display: flex;
+  flex: 0 1 auto;
+  min-height: 18px;
+  flex-direction: column;
+}
+
+.no-script {
+  border: 3px solid #f00;
+  margin: 50px auto;
+  padding: 20px;
+}

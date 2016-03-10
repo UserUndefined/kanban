@@ -1,0 +1,10 @@
+<div class="category-list" ng-model="board.categories" ui-sortable="::categorySortOpts">
+  <kb-category ng-model="category" ng-repeat="category in board.categories track by category._id">
+  </kb-category>
+</div>
+<div class="category-create">
+  <form autocomplete="off" name="newCatForm" class="form-group" ng-submit="newCatForm.$valid && createCategory()">
+    <input class="input-md form-control" name="catName" ng-model="newCat" placeholder="Add a category..." required type="text">
+    <button type="submit" class="btn btn-black btn-block">Add Category</button>
+  </form>
+</div>

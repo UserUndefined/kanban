@@ -1,0 +1,83 @@
+.modal-open .modal {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.modal-dialog {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  min-height: 0px;
+  width: min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+}
+
+.modal-content {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-container {
+  display: flex;
+  flex: 0 1 auto;
+  min-height: 0px;
+  flex-direction: column;
+}
+
+.modal-title {
+  flex: 0 0 auto;
+}
+
+.modal-close {
+  flex: 0 1 auto;
+  height: 0px;
+}
+
+.modal-close button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.modal-close button:hover {
+  border-color: #aaa;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.modal-title > input {
+  height: 26px;
+  width: 40%;
+}
+
+.modal-title h3 {
+  margin-top: 0px;
+}
+
+.modal-user-list {
+  display: block;
+  height: 52px;
+  margin-top: 15px;
+}
+
+.modal-user {
+  float: left;
+  margin-right: 3px;
+}
+
+#modal-user img {
+  border: 1px solid #aaa;
+  height: 50px;
+  width: 50px;
+}
+
+.modal-options > * {
+  margin-bottom: 3px;
+}

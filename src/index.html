@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="kanbanApp" ng-strict-di>
+
+<head>
+  <title ng-bind="websiteTitle">Kanban</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="common/bower-components/bootstrap/dist/css/bootstrap.css">
+  <!-- build:css main.css -->
+  <!-- COMMENT used by "grunt build" to concat and minify css-->
+  <link rel="stylesheet" type="text/css" href="common/bower-components/angular-loading-bar/build/loading-bar.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="common/directives/editable-text/editable-text.css">
+  <link rel="stylesheet" type="text/css" href="common/css/common-css.css">
+  <link rel="stylesheet" type="text/css" href="common/css/ui-fancy-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="common/css/modals.css">
+  <link rel="stylesheet" type="text/css" href="error-page/error-page.css">
+  <link rel="stylesheet" type="text/css" href="about-page/about.css">
+  <link rel="stylesheet" type="text/css" href="oauth-page/oauth.css">
+  <link rel="stylesheet" type="text/css" href="board-list-page/board-list.css">
+  <link rel="stylesheet" type="text/css" href="board-list-page/board-modal/board-modal.css">
+  <link rel="stylesheet" type="text/css" href="board-page/board.css">
+  <link rel="stylesheet" type="text/css" href="board-page/users/users.css">
+  <link rel="stylesheet" type="text/css" href="board-page/users/user-directive/user-directive.css">
+  <link rel="stylesheet" type="text/css" href="board-page/users/user-modal/user-modal.css">
+  <link rel="stylesheet" type="text/css" href="board-page/categories/categories.css">
+  <link rel="stylesheet" type="text/css" href="board-page/categories/category-directive/category-directive.css">
+  <link rel="stylesheet" type="text/css" href="board-page/tasks/tasks.css">
+  <link rel="stylesheet" type="text/css" href="board-page/tasks/task-directive/task-directive.css">
+  <link rel="stylesheet" type="text/css" href="board-page/tasks/task-modal/task-modal.css">
+  <link rel="stylesheet" type="text/css" href="common/views/navbar/navbar.css">
+  <link rel="stylesheet" type="text/css" href="common/views/footer/footer.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <!-- endbuild -->
+  <script type="text/javascript" src="common/bower-components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="common/bower-components/angular/angular.js"></script>
+  <!-- build:js main.js -->
+  <!-- COMMENT used by "grunt build" to concat and uglify js-->
+  <script type="text/javascript" src="common/modified-bower-components/jquery-ui/jquery-ui-fixed.js"></script>
+  <script type="text/javascript" src="common/bower-components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="common/bower-components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="common/bower-components/angular-ui-sortable/sortable.js"></script>
+  <script type="text/javascript" src="common/bower-components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script type="text/javascript" src="common/bower-components/angular-loading-bar/build/loading-bar.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="env.js"></script>
+  <script type="text/javascript" src="common/filters/capitalize/capitalize.js"></script>
+  <script type="text/javascript" src="common/directives/match-validator/match-validator.js"></script>
+  <script type="text/javascript" src="common/directives/editable-text/editable-text.js"></script>
+  <script type="text/javascript" src="common/directives/deletable-object/deletable-object.js"></script>
+  <script type="text/javascript" src="common/directives/expandable-text/expandable-text.js"></script>
+  <script type="text/javascript" src="common/directives/cp-child-min-height/cp-child-min-height.js"></script>
+  <script type="text/javascript" src="common/views/navbar/navbar.js"></script>
+  <script type="text/javascript" src="common/providers/sort-opts-factories/user/user-sort-opts.js"></script>
+  <script type="text/javascript" src="common/providers/sort-opts-factories/task/task-sort-opts.js"></script>
+  <script type="text/javascript" src="common/providers/sort-opts-factories/category/category-sort-opts.js"></script>
+  <script type="text/javascript" src="common/providers/board-factory/board-factory.js"></script>
+  <script type="text/javascript" src="common/providers/user-factory/user-factory.js"></script>
+  <script type="text/javascript" src="common/providers/server-api/server-api.js"></script>
+  <script type="text/javascript" src="common/providers/error-handler/error-handler.js"></script>
+  <script type="text/javascript" src="error-page/error-page.js"></script>
+  <script type="text/javascript" src="about-page/about.js"></script>
+  <script type="text/javascript" src="oauth-page/oauth.js"></script>
+  <script type="text/javascript" src="board-list-page/board-list.js"></script>
+  <script type="text/javascript" src="board-list-page/board-modal/board-modal.js"></script>
+  <script type="text/javascript" src="board-page/board.js"></script>
+  <script type="text/javascript" src="board-page/users/users.js"></script>
+  <script type="text/javascript" src="board-page/users/user-directive/user-directive.js"></script>
+  <script type="text/javascript" src="board-page/users/user-modal/user-modal.js"></script>
+  <script type="text/javascript" src="board-page/tasks/tasks.js"></script>
+  <script type="text/javascript" src="board-page/tasks/task-directive/task-directive.js"></script>
+  <script type="text/javascript" src="board-page/tasks/task-modal/task-modal.js"></script>
+  <script type="text/javascript" src="board-page/categories/categories.js"></script>
+  <script type="text/javascript" src="board-page/categories/category-directive/category-directive.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <noscript class="no-script">
+    <h1>To use the Kanban app, please enable JavaScript.</h1>
+  </noscript>
+  <div class="navbar-view" ui-view="navbar-view"></div>
+  <div copy-child-min-height class="body-view" ui-view="body-view"></div>
+  <div class="footer-view" ui-view="footer-view"></div>
+</body>
+
+</html>
